@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Manoj Sajjan — EEE Engineer | BMS, Embedded, Backend & Cloud</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{color-scheme:dark;--bg:#0b1220;--panel:#111a2b;--line:#1f2b40;--tx:#f2f5f8;--mut:#9aa8bd;--blue:#3b6fe0;--cyan:#7fb2ff;--teal:#3fb68b;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-behavior:smooth;scroll-padding-top:calc(72px + env(safe-area-inset-top,0px))}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:var(--bg);color:var(--tx);font:16px/1.65 'Instrument Sans',system-ui,sans-serif;overflow-x:hidden}
+h1,h2,h3{font-family:Bricolage Grotesque,system-ui,sans-serif;line-height:1.15;margin:0}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+section{padding:88px 0}
+h2{font-size:clamp(1.7rem,4vw,2.5rem);letter-spacing:-.02em;margin-bottom:12px}
+.lead{color:var(--mut);max-width:62ch;margin:0 0 40px}
+:focus-visible{outline:2px solid var(--cyan);outline-offset:3px}
+nav{position:fixed;top:0;left:0;right:0;z-index:50;padding-top:env(safe-area-inset-top,0px);background:rgba(11,18,32,.75);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{font:700 1.05rem Bricolage Grotesque;width:38px;height:38px;border:1.5px solid var(--cyan);border-radius:9px;display:grid;place-items:center;color:var(--cyan)}
+.links{display:flex;gap:6px}
+.links a{padding:8px 12px;border-radius:8px;color:var(--mut);font-size:.92rem;transition:.2s}
+.links a:hover{color:var(--tx);background:#ffffff0d}
+@media(max-width:700px){.links a{padding:8px 7px;font-size:.8rem}}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 20px;border-radius:10px;font-weight:500;border:1px solid var(--line);background:var(--panel);cursor:pointer;font:500 .95rem 'Instrument Sans';color:var(--tx);transition:.2s}
+.btn:hover{border-color:var(--cyan)}
+.btn.pri{background:var(--blue);border-color:var(--blue)}
+.btn.pri:hover{background:#5b86ea}
+.hero{padding:132px 0 72px}
+.hero .wrap{display:grid;grid-template-columns:1.05fr 1fr;gap:40px;align-items:center}
+@media(max-width:860px){.hero .wrap{grid-template-columns:1fr}}
+.tag{display:inline-block;color:var(--teal);font-size:.88rem;border:1px solid #3fb68b55;background:#3fb68b12;padding:5px 12px;border-radius:99px;margin-bottom:22px}
+h1{font-size:clamp(2.5rem,7vw,4.4rem);letter-spacing:-.035em}
+.role{font:600 clamp(1.05rem,2.4vw,1.35rem) Bricolage Grotesque;color:var(--cyan);margin:18px 0 12px}
+.sub{color:var(--mut);max-width:50ch;margin:0 0 28px}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:24px}
+.soc{display:flex;gap:20px;color:var(--mut);font-size:.92rem}.soc a:hover{color:var(--tx)}
+.vis{background:linear-gradient(160deg,#0f172a,#0b1220);border:1px solid var(--line);border-radius:18px;padding:10px}
+.vis svg{width:100%;height:auto;display:block}
+.tr{stroke:var(--cyan);stroke-width:1.6;fill:none;stroke-dasharray:6 8;animation:dash 1.4s linear infinite;opacity:.8}
+.tr.t{stroke:var(--teal)}
+@keyframes dash{to{stroke-dashoffset:-28}}
+.cell{transform-box:fill-box;transform-origin:bottom;animation:chg 4.5s ease-in-out infinite}
+@keyframes chg{0%{transform:scaleY(.25)}70%,100%{transform:scaleY(1)}}
+.pulse{animation:pl 2s ease-in-out infinite}@keyframes pl{50%{opacity:.35}}
+.about{display:grid;grid-template-columns:1.3fr 1fr;gap:40px}
+@media(max-width:860px){.about{grid-template-columns:1fr}}
+.about p{color:#c7d0d9;margin:0 0 16px}
+.facts{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-content:start}
+.fact{border:1px solid var(--line);border-radius:12px;padding:16px;background:var(--panel)}
+.fact b{display:block;font:600 1.05rem Bricolage Grotesque}.fact span{color:var(--mut);font-size:.85rem}
+.pipe{display:flex;flex-direction:column;gap:0;max-width:520px;margin:0 auto}
+.node{border:1px solid var(--line);background:var(--panel);border-radius:14px;padding:16px 20px;display:flex;justify-content:space-between;align-items:center;gap:12px}
+.node b{font:600 1rem Bricolage Grotesque;letter-spacing:.04em}.node span{color:var(--mut);font-size:.88rem;text-align:right}
+.node.bms{border-color:#3fb68b66}
+.link{height:34px;width:2px;margin:0 auto;background:repeating-linear-gradient(var(--cyan) 0 6px,transparent 6px 12px);background-size:2px 12px;animation:flow .8s linear infinite}
+@keyframes flow{to{background-position:0 12px}}
+.pg{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+@media(max-width:860px){.pg{grid-template-columns:1fr}}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px}
+.card{border:1px solid var(--line);background:var(--panel);border-radius:14px;padding:22px}
+.card h3{font-size:1.05rem;margin-bottom:6px}.card p{margin:0;color:var(--mut);font-size:.92rem}
+.card.t{border-top:2px solid var(--teal)}
+.batt{display:flex;gap:6px;align-items:center;margin-bottom:28px}
+.batt i{flex:1;height:52px;border:1px solid #3fb68b66;border-radius:6px;background:#3fb68b12;animation:bc 3.6s ease-in-out infinite}
+.batt i:nth-child(2){animation-delay:.3s}.batt i:nth-child(3){animation-delay:.6s}.batt i:nth-child(4){animation-delay:.9s}.batt i:nth-child(5){animation-delay:1.2s}.batt i:nth-child(6){animation-delay:1.5s}
+@keyframes bc{0%,15%{background:#3fb68b12}45%,100%{background:#3fb68baa}}
+.stack{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}
+.chip{border:1px solid var(--line);background:#ffffff08;border-radius:8px;padding:6px 12px;font-size:.88rem;color:#d4dbe2;transition:.2s}
+.chip:hover{border-color:var(--cyan);transform:translateY(-2px)}
+.chip.teal{border-color:#3fb68b4d;color:#c8f2e2}
+.tabs{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:24px}
+.tab{padding:10px 16px;border-radius:10px;border:1px solid var(--line);background:transparent;color:var(--mut);cursor:pointer;font:500 .9rem 'Instrument Sans';transition:.2s}
+.tab[aria-selected=true]{background:var(--panel);color:var(--tx);border-color:var(--cyan)}
+.tab.b[aria-selected=true]{border-color:var(--teal)}
+#panel{border:1px solid var(--line);border-radius:16px;padding:28px;background:var(--panel);min-height:150px}
+#panel p{margin:0 0 18px;color:var(--mut)}
+#panel .chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips .chip{animation:pop .3s ease both}@keyframes pop{from{opacity:0;transform:translateY(6px)}}
+.proj{display:grid;gap:20px}
+.pc{border:1px solid var(--line);border-radius:18px;background:var(--panel);overflow:hidden;display:grid;grid-template-columns:240px 1fr;transition:.25s}
+.pc:hover{border-color:#3b6fe088;transform:translateY(-3px)}
+.pc.feat{border-color:#3fb68b80;grid-template-columns:340px 1fr}
+@media(max-width:760px){.pc,.pc.feat{grid-template-columns:1fr}}
+.art{min-height:160px;position:relative;background:#0a101c}
+.art svg{position:absolute;inset:0;width:100%;height:100%}
+.pb{padding:24px}
+.pb h3{font-size:1.2rem;margin-bottom:8px}.pb p{color:var(--mut);margin:0 0 14px;font-size:.95rem}
+.badge{display:inline-block;font-size:.78rem;padding:3px 10px;border-radius:99px;border:1px solid var(--line);color:#b7c2cd;margin:0 6px 6px 0}
+.fl{font-size:.7rem;color:var(--teal);border-color:#3fb68b66;background:#3fb68b12}
+.more{display:grid;grid-template-rows:0fr;transition:grid-template-rows .3s}
+.more>div{overflow:hidden}
+.pc.open .more{grid-template-rows:1fr}
+.more ul{margin:10px 0 4px;padding-left:18px;color:#c7d0d9;font-size:.92rem}
+.acts{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
+.acts .btn{padding:8px 14px;font-size:.88rem}
+.tl{border-left:1px solid var(--line);margin-left:6px}
+.ti{position:relative;padding:0 0 28px 28px}
+.ti::before{content:"";position:absolute;left:-5px;top:7px;width:9px;height:9px;border-radius:50%;background:var(--cyan)}
+.ti h3{font-size:1.1rem}.ti small{color:var(--teal)}.ti p{color:var(--mut);margin:6px 0 0;max-width:64ch}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+@media(max-width:860px){.two{grid-template-columns:1fr}}
+.cf{display:grid;gap:12px;margin-top:8px}
+.cf input,.cf textarea{width:100%;background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:13px 14px;color:var(--tx);font:inherit}
+.cf input:focus,.cf textarea:focus{outline:none;border-color:var(--cyan)}
+footer{border-top:1px solid var(--line);padding:36px 0;color:var(--mut);font-size:.9rem}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+footer b{color:var(--tx);font-family:Bricolage Grotesque}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
+
+:root{--mut:#a9b7cb;--tx:#f4f7fc}
+body{font-size:17px;line-height:1.7;color:#dbe4f2;font-feature-settings:"kern","liga";-webkit-font-smoothing:antialiased}
+::selection{background:#3b6fe066}
+h1,h2,h3{font-weight:700}
+h2{font-size:clamp(2rem,4.6vw,3rem);letter-spacing:-.03em;margin-bottom:16px}
+h2::after{content:"";display:block;width:48px;height:3px;border-radius:3px;background:linear-gradient(90deg,var(--cyan),var(--teal));margin-top:16px}
+.lead{font-size:1.08rem;color:var(--mut);line-height:1.75}
+.hero{background:radial-gradient(60% 55% at 78% 30%,#3b6fe026,transparent 70%),radial-gradient(40% 40% at 8% 90%,#3fb68b1a,transparent 70%)}
+h1{font-size:clamp(3rem,8.5vw,5.4rem);letter-spacing:-.045em;line-height:1.02;background:linear-gradient(180deg,#fff 30%,#a9c4f5);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.role{font-size:clamp(1.1rem,2.5vw,1.45rem);font-weight:600;letter-spacing:-.01em;color:#a9c8ff}
+.sub{font-size:1.1rem;color:#c3cee0}
+.tag{font-weight:500;letter-spacing:.01em;padding:7px 16px;background:#3fb68b1c}
+.btn{font-weight:600;padding:13px 22px;border-radius:12px}
+.btn.pri{box-shadow:0 8px 24px -8px #3b6fe0aa}
+.vis{box-shadow:0 30px 80px -30px #000,0 0 0 1px #ffffff08 inset}
+.card,.fact,.node{border-radius:16px;transition:.25s}
+.card:hover,.fact:hover{border-color:#7fb2ff66;transform:translateY(-3px);box-shadow:0 18px 40px -22px #3b6fe099}
+.card h3{font-size:1.15rem}.card p{font-size:.98rem;color:#aebbd0}
+.fact b{font-size:1.15rem}
+.pb h3{font-size:1.35rem;letter-spacing:-.02em}.pb p{font-size:1rem;color:#b3c0d4}
+.pc{border-radius:20px}.pc:hover{box-shadow:0 24px 60px -30px #3b6fe0aa}
+.badge{font-size:.8rem;padding:4px 11px;color:#c4d0e2;background:#ffffff06}
+.chip{font-size:.92rem;padding:7px 14px;border-radius:10px}
+.node b{letter-spacing:.06em;font-size:.95rem}.node{padding:18px 22px}
+.ti h3{font-size:1.25rem}.ti p{color:#b3c0d4}
+nav{box-shadow:0 1px 0 #ffffff08}
+.links a{font-weight:500}
+.rv{opacity:0;transform:translateY(16px);transition:opacity .7s ease,transform .7s ease}
+.rv.in{opacity:1;transform:none}
+</style>
+</head>
+<body>
+<nav><div class="wrap"><a class="logo" href="#home" aria-label="Home">MS</a>
+<div class="links"><a href="#home">Home</a><a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#bms">BMS</a><a href="#contact">Contact</a></div></div></nav>
+
+<header class="hero" id="home"><div class="wrap">
+<div>
+<span class="tag">Co-founder, Kelvyx Energy</span>
+<h1>Manoj Sajjan</h1>
+<p class="role">EEE Engineer | BMS &amp; Embedded Systems | Backend &amp; Cloud</p>
+<p class="sub">Building intelligent systems across Battery Management, Embedded Hardware, Backend Engineering and Cloud Computing.</p>
+<div class="cta"><a class="btn pri" href="#projects">View Projects</a><a class="btn" href="#" download>Download Resume</a><a class="btn" href="#contact">Contact Me</a></div>
+<div class="soc"><a href="#" id="li">LinkedIn</a><a href="#" id="gh">GitHub</a><a href="mailto:sajjanmanoj26@gmail.com">Email</a></div>
+</div>
+<div class="vis" aria-hidden="true">
+<svg viewBox="0 0 520 440">
+<defs><pattern id="g" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M20 0H0V20" fill="none" stroke="#18233a" stroke-width="1"/></pattern></defs>
+<rect width="520" height="440" fill="url(#g)"/>
+<text x="24" y="30" fill="#9aa8bd" font-size="11" font-family="Instrument Sans">PACK · 4S3P Li-ion</text>
+<rect x="20" y="40" width="250" height="150" rx="10" fill="#0d1524" stroke="#2a3a55"/>
+<g id="cells"></g>
+<path class="tr t" d="M145 190V225"/>
+<rect x="60" y="225" width="170" height="80" rx="8" fill="#0e2a2a" stroke="#3fb68b"/>
+<text x="76" y="247" fill="#3fb68b" font-size="11" font-family="Instrument Sans">BMS BOARD</text>
+<rect x="76" y="256" width="44" height="36" rx="4" fill="#0a1c1c" stroke="#3fb68b99"/>
+<text x="83" y="278" fill="#c8f2e2" font-size="10" font-family="Instrument Sans">AFE IC</text>
+<circle cx="150" cy="274" r="3" fill="#3fb68b" class="pulse"/><circle cx="165" cy="274" r="3" fill="#7fb2ff" class="pulse"/><circle cx="180" cy="274" r="3" fill="#3b6fe0" class="pulse"/>
+<path class="tr" d="M230 265H330V225"/>
+<rect x="290" y="130" width="110" height="95" rx="8" fill="#0f1b30" stroke="#3b6fe0"/>
+<text x="304" y="152" fill="#9cc0ff" font-size="11" font-family="Instrument Sans">STM32 / ESP32</text>
+<rect x="316" y="165" width="58" height="46" rx="3" fill="#0a101c" stroke="#3b6fe099"/>
+<g stroke="#3b6fe099">
+<path d="M326 165v-8M340 165v-8M354 165v-8M366 165v-8M326 211v8M340 211v8M354 211v8M366 211v8"/></g>
+<path class="tr" d="M345 130V80H430"/>
+<path d="M430 52a28 28 0 0 1 54-8 22 22 0 0 1 8 43H440a20 20 0 0 1-10-35z" fill="#0f1b30" stroke="#7fb2ff"/>
+<text x="446" y="76" fill="#7fb2ff" font-size="12" font-family="Bricolage Grotesque" font-weight="600">AWS</text>
+<path class="tr" d="M462 90V160"/>
+<rect x="410" y="160" width="100" height="120" rx="8" fill="#0d1524" stroke="#2a3a55"/>
+<text x="422" y="180" fill="#9aa8bd" font-size="10" font-family="Instrument Sans">Monitoring API</text>
+<polyline points="420,260 436,244 450,252 466,222 482,236 500,200" fill="none" stroke="#7fb2ff" stroke-width="1.8"/>
+<text x="24" y="345" fill="#9aa8bd" font-size="11" font-family="Instrument Sans">Cell data  →  embedded controller  →  Spring Boot API  →  cloud dashboard</text>
+<text x="24" y="375" fill="#3fb68b" font-size="12" font-family="Instrument Sans">Pack 14.8 V · Cell Δ 12 mV · Temp 31 °C</text>
+<text x="24" y="395" fill="#5d6b78" font-size="10" font-family="Instrument Sans">Illustrative telemetry for the concept diagram</text>
+</svg></div>
+</div></header>
+
+<section id="about"><div class="wrap about">
+<div><h2>About</h2>
+<p>Electrical and Electronics Engineering student at BMS College of Engineering with interests spanning Battery Management Systems, Embedded Systems, Backend Engineering and Cloud Computing. I enjoy building systems that connect hardware, software and cloud infrastructure.</p>
+<p>I am the co-founder of <a href="https://kelvyxenergy-nine.vercel.app/" target="_blank" rel="noopener" style="color:var(--cyan)">Kelvyx Energy</a>, where we are working on battery management solutions for EV and battery-pack applications.</p>
+<p>My main technical interest is BMS: how packs are monitored, protected and estimated. Around it I work on embedded firmware, robotics, Spring Boot backends and AWS, and I practise joining them through hands-on projects.</p></div>
+<div class="facts">
+<div class="fact"><b>Co-founder</b><span>Kelvyx Energy</span></div><div class="fact"><b>Embedded</b><span>STM32, ESP32, Embedded C</span></div>
+<div class="fact"><b>BMS</b><span>Main technical focus</span></div><div class="fact"><b>Robotics</b><span>SIH, e-Yantra</span></div><div class="fact"><b>Backend</b><span>Java, Spring Boot</span></div>
+<div class="fact"><b>Cloud</b><span>AWS Solutions Architect Associate</span></div>
+</div></div></section>
+
+<section id="stack" style="background:#0e1626"><div class="wrap">
+<h2>Engineering Across the Stack</h2>
+<p class="lead">The goal is to connect physical systems with software and cloud infrastructure: from monitoring individual battery cells to processing data in embedded controllers, exposing backend APIs and connecting systems to the cloud.</p>
+<div class="pipe">
+<div class="node"><b>BATTERY</b><span>Li-ion cells and pack</span></div><div class="link"></div>
+<div class="node bms"><b>BMS</b><span>Sensing, protection, estimation</span></div><div class="link"></div>
+<div class="node"><b>EMBEDDED SYSTEM</b><span>STM32 / ESP32 firmware</span></div><div class="link"></div>
+<div class="node"><b>BACKEND</b><span>Spring Boot REST APIs</span></div><div class="link"></div>
+<div class="node"><b>CLOUD</b><span>AWS EC2, S3, IAM, VPC</span></div><div class="link"></div>
+<div class="node"><b>DATA / MONITORING</b><span>PostgreSQL and dashboards</span></div>
+</div></div></section>
+
+<section id="bms"><div class="wrap">
+<div class="pg"><div><h2>Building Towards Smarter Battery Systems</h2>
+<p class="lead" style="margin-bottom:24px">Exploring how real BMS hardware senses, protects and reports on a pack. Hands-on learning, one subsystem at a time.</p></div>
+<div class="batt" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></div></div>
+<div class="cards">
+<div class="card t"><h3>Cell Monitoring</h3><p>Voltage · Current · Temperature</p></div>
+<div class="card t"><h3>Protection</h3><p>OV · UV · OC · OT</p></div>
+<div class="card t"><h3>Battery Estimation</h3><p>SOC · SOH · SOP</p></div>
+<div class="card t"><h3>Cell Balancing</h3><p>Passive / Active balancing</p></div>
+<div class="card t"><h3>Communication</h3><p>CAN · SPI · UART</p></div>
+<div class="card t"><h3>Thermal Management</h3><p>Temperature monitoring · Safety</p></div>
+</div></div></section>
+
+<section id="skills" style="background:#0e1626"><div class="wrap">
+<h2>Skills</h2><p class="lead">Pick a domain. BMS comes first because it is where most of my learning is going.</p>
+<div class="tabs" id="tabs" role="tablist"></div><div id="panel" role="tabpanel"></div>
+</div></section>
+
+<section id="projects"><div class="wrap">
+<h2>Projects</h2><p class="lead">Hardware, robotics, backend and cloud work. Open a card for details.</p>
+<div class="proj" id="proj"></div>
+</div></section>
+
+<section style="background:#0e1626"><div class="wrap">
+<h2>Cloud + Backend Architecture</h2>
+<p class="lead">How a device could reach a dashboard. This is the design I am working towards.</p>
+<div class="pipe" style="max-width:420px">
+<div class="node bms"><b>BMS / DEVICE</b><span>Cell data</span></div><div class="link"></div>
+<div class="node"><b>EMBEDDED CONTROLLER</b><span>STM32 / ESP32</span></div><div class="link"></div>
+<div class="node"><b>CAN / IoT</b><span>CAN · MQTT</span></div><div class="link"></div>
+<div class="node"><b>BACKEND API</b><span>Spring Boot</span></div><div class="link"></div>
+<div class="node"><b>DATABASE</b><span>PostgreSQL</span></div><div class="link"></div>
+<div class="node"><b>AWS CLOUD</b><span>EC2 · S3 · IAM</span></div><div class="link"></div>
+<div class="node"><b>MONITORING DASHBOARD</b><span>React</span></div>
+</div></div></section>
+
+<section><div class="wrap two">
+<div><h2>Education</h2><div class="tl"><div class="ti"><h3>BMS College of Engineering</h3><small>2024 – Present · Bengaluru, India</small><p>Bachelor of Engineering, Electrical and Electronics Engineering.</p>
+<div class="stack" style="margin-top:14px"><span class="chip">Digital Electronics</span><span class="chip">Microcontrollers &amp; Embedded Systems</span><span class="chip">Control Systems</span><span class="chip">Electrical Machines</span><span class="chip">Signals and Systems</span><span class="chip">Circuit Theory</span><span class="chip">Data Structures and Algorithms</span><span class="chip">Object-Oriented Programming</span><span class="chip">Database Management Systems</span><span class="chip">Computer Networks</span><span class="chip">Operating Systems</span><span class="chip">Software Engineering</span></div></div>
+<div class="ti"><h3>Elite PU Science College</h3><small>2022 – 2024 · Sindagi</small><p>Pre-University, Science (Grade XII).</p></div></div></div>
+<div><h2>Competitions</h2><div class="tl">
+<div class="ti"><h3>Smart India Hackathon</h3><small>Underground Mining Rover</small><p>Team build combining sensors, embedded control and remote operation.</p></div>
+<div class="ti"><h3>e-Yantra Robotics Competition</h3><small>PacBot / Pocbot</small><p>Autonomous platform: navigation, sensing and control logic.</p></div></div>
+<h2 style="margin-top:20px;font-size:1.5rem">Certifications</h2>
+<div class="stack"><span class="chip teal">AWS Certified Solutions Architect Associate – GeeksforGeeks</span><span class="chip">DSA / Problem Solving</span><span class="chip">LeetCode</span><span class="chip">HackerRank</span></div></div>
+</div></section>
+
+<section id="contact" style="background:#0e1626"><div class="wrap two">
+<div><h2>Let's Build Something</h2>
+<p class="lead">Interested in BMS, embedded systems, backend engineering, cloud platforms or hardware-software systems? Let's connect.</p>
+<div class="cta"><a class="btn pri" href="mailto:sajjanmanoj26@gmail.com">Email Me</a><a class="btn" href="mailto:kelvyx_energy@outlook.com">Company Email</a><a class="btn" href="tel:+916366318239">Call</a><a class="btn" href="#" id="li2">LinkedIn</a><a class="btn" href="#" id="gh2">GitHub</a></div>
+<p style="color:var(--mut)">Phone: <a href="tel:+916366318239" style="color:var(--tx)">+91 6366318239</a><br>Personal: sajjanmanoj26@gmail.com<br>Kelvyx Energy: kelvyx_energy@outlook.com</p></div>
+<form class="cf" id="cf"><input name="n" placeholder="Name" required aria-label="Name"><input name="e" type="email" placeholder="Email" required aria-label="Email"><textarea name="m" rows="5" placeholder="Message" required aria-label="Message"></textarea><button class="btn pri" type="submit" style="justify-content:center">Send message</button></form>
+</div></section>
+
+<footer><div class="wrap"><div><b>Manoj Sajjan</b><br>EEE Engineer | BMS • Embedded • Backend • Cloud</div><div class="soc"><a href="#" id="li3">LinkedIn</a><a href="#" id="gh3">GitHub</a><a href="mailto:sajjanmanoj26@gmail.com">Email</a><a href="tel:+916366318239">+91 6366318239</a></div></div></footer>
+
+<script>
+var LI="https://www.linkedin.com/in/manojsajjan/",GH="https://github.com/MANOJ200598";
+["li","li2","li3"].forEach(function(i){document.getElementById(i).href=LI});
+["gh","gh2","gh3"].forEach(function(i){document.getElementById(i).href=GH});
+var c="";for(var r=0;r<3;r++)for(var k=0;k<4;k++){var x=36+k*60,y=54+r*42;c+='<rect x="'+x+'" y="'+y+'" width="52" height="34" rx="5" fill="#0a0e12" stroke="#2a3a55"/><rect class="cell" style="animation-delay:'+((r*4+k)*.25)+'s" x="'+(x+3)+'" y="'+(y+3)+'" width="46" height="28" rx="3" fill="#3fb68b" opacity=".75"/>'}
+document.getElementById("cells").innerHTML=c;
+var S=[["Battery Management",1,"Highlighted focus","Battery Management Systems (BMS),Lithium-Ion Batteries,Battery Pack Design,Cell Monitoring,Cell Balancing,State of Charge (SOC),State of Health (SOH),Battery Protection,Thermal Management,Voltage Sensing,Current Sensing,Temperature Sensing,CAN Communication,Battery Monitoring ICs,Fault Detection,Embedded BMS Control"],
+["Embedded & Hardware",0,"Firmware and interfaces","Embedded Systems,Embedded C,C,C++,Python,STM32,ESP32,Microcontrollers,Sensors,UART,SPI,I2C,CAN,ADC,GPIO,Motor Control,Hardware-Software Integration,Robotics,Control Logic"],
+["Circuit & Tools",0,"Simulation and design","MATLAB,Simulink,LTspice,Circuit Simulation,Control Systems,Digital Electronics,Microcontrollers,Circuit Analysis,PCB Design,Hardware Prototyping"],
+["Backend",0,"Java services and data","Java,Spring Boot,REST APIs,JDBC,JPA,Hibernate,SQL,PostgreSQL,MySQL,H2,Maven,JWT Authentication"],
+["Frontend",0,"User interfaces","HTML,CSS,JavaScript,React,Tailwind CSS,Vite,React Router,Axios"],
+["Cloud & DevOps",0,"Deploy and connect","AWS,EC2,S3,IAM,VPC,Auto Scaling,NAT Gateway,Elastic IP,Cloud Architecture,Cloud Deployment,AWS IoT / Cloud-connected systems,Git,GitHub,Postman,Maven,IntelliJ IDEA,VS Code"],
+["Professional",0,"How I work","Time Management,Teamwork,Communication,Problem Solving,Hands-on Learning"]];
+var tabs=document.getElementById("tabs"),panel=document.getElementById("panel");
+function show(i){[].forEach.call(tabs.children,function(t,j){t.setAttribute("aria-selected",j==i)});
+panel.innerHTML="<p>"+S[i][2]+"</p><div class='chips'>"+S[i][3].split(",").map(function(s,n){return"<span class='chip"+(S[i][1]?" teal":"")+"' style='animation-delay:"+n*25+"ms'>"+s+"</span>"}).join("")+"</div>"}
+S.forEach(function(s,i){var b=document.createElement("button");b.className="tab"+(s[1]?" b":"");b.setAttribute("role","tab");b.textContent=s[0];b.onclick=function(){show(i)};tabs.appendChild(b)});show(0);
+var P=[
+{t:"Kelvyx Energy — BMS Platform",f:1,h:160,d:"Co-founded Kelvyx Energy. Exploring and building solutions around Battery Management Systems for EV and battery-pack applications, with a focus on understanding real-world BMS requirements, battery monitoring, safety, and intelligent battery systems.",tg:["BMS","EV","Battery Technology","Energy Systems","Embedded Systems","Cloud"],k:["Battery monitoring concepts","Safety and protection requirements","Real-world BMS requirements","Pack-level system thinking"],l:[["Visit Kelvyx Energy →","https://kelvyxenergy-nine.vercel.app/",1]]},
+{t:"Underground Mining Rover — Smart India Hackathon",h:210,d:"Working as part of a national-level Smart India Hackathon team to design and build a rover for underground mining operations, combining hardware, sensors, embedded control logic and hardware-software integration.",tg:["Embedded Systems","C/C++","Python","Sensors","Robotics","Control Logic","Hardware Integration"],k:["Underground robotics","Sensor integration","Embedded control","Hardware-software integration","Autonomous / remote operation"],l:[]},
+{t:"PacBot / Pocbot — e-Yantra Robotics Competition",h:30,d:"Building an autonomous robotics platform for the e-Yantra robotics competition, focusing on navigation, sensing, control logic and embedded programming.",tg:["Robotics","Embedded C","Navigation","Sensors","MQTT"],k:["Embedded programming","Navigation","Sensor processing","Control algorithms","MQTT / communication where applicable"],l:[]},
+{t:"SeasonOS — Full Stack Application",h:260,d:"Built a full-stack application for managing routines, medicines and goals with secure authentication and database integration.",tg:["Java","Spring Boot","PostgreSQL","React","REST APIs","JWT","JPA/Hibernate"],k:["Authentication","REST APIs","PostgreSQL database","CRUD operations","React frontend","Backend architecture"],l:[["GitHub →","https://github.com/MANOJ200598/SeasonalLife",0]]},
+{t:"Full-Stack Quiz Application",h:280,d:"Developed a full-stack quiz platform with question management, quiz generation and score calculation using REST APIs and database integration.",tg:["Java","Spring Boot","PostgreSQL","React","REST APIs"],k:["Question management","Quiz generation","Score calculation"],l:[]},
+{t:"AWS Cloud Architecture Practice",h:190,d:"Designed and deployed practice cloud architectures to understand scalable application infrastructure, networking, storage, security and compute.",tg:["EC2","S3","IAM","VPC","Auto Scaling","NAT Gateway","Elastic IP"],k:["Compute and storage","Networking with VPC and NAT Gateway","Access control with IAM","Scaling with Auto Scaling"],l:[["GitHub →","https://github.com/MANOJ200598/aws-scalable-web-application",0]]}];
+var pj=document.getElementById("proj");
+P.forEach(function(p,i){var col=p.f?"#3fb68b":"hsl("+p.h+" 80% 60%)";var tr="";for(var n=0;n<7;n++){var y=20+n*(p.f?30:22);tr+='<path d="M0 '+y+'H'+(40+n*18)+'l14 14H'+(200+n*12)+'" fill="none" stroke="'+col+'" stroke-opacity="'+(.15+n*.08)+'"/><circle cx="'+(40+n*18)+'" cy="'+y+'" r="2.5" fill="'+col+'"/>'}
+var d=document.createElement("article");d.className="pc"+(p.f?" feat":"");
+d.innerHTML='<div class="art"><svg preserveAspectRatio="xMidYMid slice" viewBox="0 0 300 220">'+tr+'</svg></div><div class="pb">'+(p.f?'<span class="badge fl">Featured project</span><span class="badge fl">Co-founder</span><br>':'')+'<h3>'+p.t+'</h3><p>'+p.d+'</p><div>'+p.tg.map(function(t){return'<span class="badge">'+t+'</span>'}).join("")+'</div><div class="more"><div><ul>'+p.k.map(function(k){return"<li>"+k+"</li>"}).join("")+'</ul></div></div><div class="acts">'+p.l.map(function(l){return'<a class="btn '+(l[2]?"pri":"")+'" href="'+l[1]+'" target="_blank" rel="noopener">'+l[0]+'</a>'}).join("")+'<button class="btn" aria-expanded="false">Key features</button></div></div>';
+var b=d.querySelector("button");b.onclick=function(){var o=d.classList.toggle("open");b.setAttribute("aria-expanded",o);b.textContent=o?"Hide features":"Key features"};
+pj.appendChild(d)});
+document.getElementById("cf").onsubmit=function(e){e.preventDefault();var f=e.target;location.href="mailto:sajjanmanoj26@gmail.com?subject="+encodeURIComponent("Portfolio message from "+f.n.value)+"&body="+encodeURIComponent(f.m.value+"\n\n"+f.n.value+" ("+f.e.value+")")};
+
+if("IntersectionObserver"in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){var t=e.target;t.classList.add("in");io.unobserve(t);setTimeout(function(){t.classList.remove("rv","in")},800)}})},{threshold:.12});
+document.querySelectorAll("section h2,.lead,.card,.fact,.node,.pc,.ti,#panel,.cf").forEach(function(el){el.classList.add("rv");io.observe(el)})}
+</script>
+</body>
+</html>
